@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  margin-top: 50px;
+  overflow-y: scroll;
+  height: calc(100% - 50px);
+}
+
+@keyframes viewedChangeOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes viewedChangeOff {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#imagePreview {
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: calc(100% - 50px);
+  animation-name: viewedChangeOff;
+  animation-duration: 0.25s;
+  opacity: 0;
+}
+#imagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+#imagePreview #operatingPanel {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  position: absolute;
+  color: white;
+  user-select: none;
+  transform: scale(0.975);
+  transition: 0.25s;
+  pointer-events: none;
+}
+#imagePreview #operatingPanel #headerButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50px;
+}
+#imagePreview #operatingPanel #headerButton #closeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+#imagePreview #operatingPanel #centerButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 100px);
+}
+#imagePreview #operatingPanel #centerButton #leftIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  pointer-events: auto;
+  background: radial-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0) 75%);
+}
+#imagePreview #operatingPanel #centerButton #rightIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  pointer-events: auto;
+  background: radial-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0) 75%);
+}
+#imagePreview #operatingPanel #bottomButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#imagePreview[data-viewed=true] #operatingPanel {
+  transform: scale(1);
+}
+
+#imagePreview.viewed {
+  animation-name: viewedChangeOn;
+  animation-duration: 0.25s;
+  opacity: 1;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 217, 250, 0.9);
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
+}
+header button#phoneMenuButton {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+}
+header span#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 100%;
+  font-size: 25px;
+  user-select: none;
+}
+header span#title a {
+  text-decoration: none;
+  color: inherit;
+}
+header span#title a:hover, header span#title a:focus, header span#title a:active {
+  text-decoration: none;
+  color: inherit;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 150px);
+  height: 100%;
+}
+header nav ul.phoneMenuTitle {
+  display: none;
+}
+header nav ul.phoneMenuTitle li {
+  width: 100%;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  user-select: none;
+  text-align: center;
+}
+header nav ul li a {
+  cursor: pointer;
+}
+header nav ul li a,
+header nav ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+}
+header nav ul li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+header nav ul li a:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section {
+  width: calc(100% - 25px);
+  max-width: 850px;
+}
+main section h1 {
+  font-size: 2em;
+}
+main section h2 {
+  font-size: 1.75em;
+  border-bottom: 1px solid black;
+}
+main section h3 {
+  font-size: 1.5em;
+  border-bottom: 1px solid black;
+}
+main section h4 {
+  font-size: 1.25em;
+  border-bottom: 1px solid black;
+}
+main section p {
+  font-size: 1em;
+}
+main section img {
+  max-width: 900px;
+  max-height: 400px;
+  width: 100%;
+  object-fit: contain;
+}
+main section img#topImage {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  aspect-ratio: 8/3;
+  border-radius: 15px;
+  object-fit: cover;
+}
+main section code {
+  top: -2px;
+  position: relative;
+  padding: 3px 5px;
+  margin: 2px;
+  margin-bottom: 4px;
+  margin-top: 0;
+  background: #2b2b2b;
+  color: #f8f8f2;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 5px;
+}
+main section .hljs {
+  margin: 0px;
+  position: static;
+}
+main section .indexBox {
+  display: flex;
+  justify-content: center;
+}
+main section .indexBox span {
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+main section .indexBox span p {
+  text-align: center;
+}
+main section .indexBox span .indexOl {
+  padding-left: 40px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+main section span.status {
+  display: block;
+  font-size: 0.8em;
+  margin-top: -10px;
+  padding-bottom: 10px;
+  color: rgb(80, 80, 80);
+}
+main section span.tag {
+  display: block;
+  font-size: 0.8em;
+  padding-bottom: 10px;
+  color: rgb(80, 80, 80);
+}
+main section#description {
+  text-align: center;
+}
+main section#blogList {
+  overflow: hidden;
+}
+main section#blogList h2 {
+  margin-bottom: 0;
+}
+main section#blogList ul {
+  padding-left: 0px;
+  margin-top: 15px;
+}
+main section#blogList ul.incompleteView li.incomplete {
+  display: flex;
+}
+main section#blogList ul li.incomplete {
+  display: none;
+}
+main section#blogList ul li {
+  display: flex;
+  justify-content: space-between;
+}
+main section#blogList ul li div.left {
+  display: inline;
+}
+main section#blogList ul li div.left p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+main section#blogList ul li div.left span.box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+main section#blogList ul li div.left span.box span.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: auto;
+  width: -webkit-fill-available;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.6em;
+  color: black;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo span#hyphen {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo span {
+  display: flex;
+  flex-direction: column;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo span span.popup {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  pointer-events: none;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo span span.popup span.popupBody {
+  display: inline-block;
+  position: absolute;
+  background: white;
+  font-size: 1.75em;
+  white-space: nowrap;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 7px;
+  padding-bottom: 5px;
+  margin: 5px 0;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: 0.1s;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo span:hover span.popup {
+  pointer-events: painted;
+}
+main section#blogList ul li div.left span.box span.textBox span.miniInfo span:hover span.popup span.popupBody {
+  transform: scale(1);
+  opacity: 1;
+}
+main section#blogList ul li div.left span.box span.textBox span.blogContent {
+  font-size: 0.85em;
+  margin-bottom: 0px;
+  color: rgb(80, 80, 80);
+}
+main section#blogList ul li div.right {
+  display: flex;
+  align-items: center;
+}
+main section#blogList ul li div.right img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+main section#discord p {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: rgb(201, 201, 201);
+  font-size: 0.75em;
+  color: rgb(80, 80, 80);
+}
+footer section {
+  width: calc(100% - 25px);
+  max-width: 850px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    justify-content: space-between;
+  }
+  header button#phoneMenuButton {
+    display: block;
+  }
+  header nav {
+    display: none;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+  }
+  header nav.view {
+    display: flex;
+  }
+  header nav ul.phoneMenuTitle {
+    display: flex;
+  }
+  header nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  header nav ul li {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 217, 250, 0.9);
+  }
+  header nav ul li a {
+    width: 100%;
+  }
+  header nav ul li span {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: rgb(39, 39, 39);
+    color: white;
+  }
+  header {
+    background: rgba(153, 88, 144, 0.9);
+  }
+  header button#phoneMenuButton {
+    color: white;
+  }
+  main section h2,
+  main section h3,
+  main section h4 {
+    border-bottom: 1px solid white;
+  }
+  main section .indexBox span {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  main section span.status {
+    color: rgb(201, 201, 201);
+  }
+  main section span.tag {
+    color: rgb(201, 201, 201);
+  }
+  main section#blogList ul li div.left span.box span.textBox span.miniInfo {
+    color: white;
+  }
+  main section#blogList ul li div.left span.box span.textBox span.miniInfo span span.popup span.popupBody {
+    background: rgb(40, 40, 40);
+    border: 1px solid white;
+  }
+  main section#blogList ul li div.left span.box span.textBox span.blogContent {
+    color: rgb(201, 201, 201);
+  }
+  a {
+    color: #87b9e2;
+  }
+  a:visited {
+    color: #f5b4e5;
+  }
+  footer {
+    background: rgb(80, 80, 80);
+    color: rgb(197, 197, 197);
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 700px) {
+  header nav ul li {
+    background: rgba(153, 88, 144, 0.9);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

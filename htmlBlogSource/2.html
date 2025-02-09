@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"><meta charset="utf-8">
+<meta name="viewport" content="width=240,initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1142255994512706">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1142255994512706" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" href="https://miharu.blog/imageSource/ogp.png">
+
+    <title>データ管理円滑化の方法7選! - miharu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
+    <script src="../imagePreviewScript.js"></script>
+    <meta name="description" content="この記事ではデータ管理を楽にする方法を紹介していきます。筆者の個人的に行っている方法と、パソコンの仕様に基づいた注意点も解説しています。参考までに読んでいっていただけると嬉しいです。
+">
+    <meta property="og:title" content="データ管理円滑化の方法7選!">
+    <meta property="og:description" content="この記事ではデータ管理を楽にする方法を紹介していきます。筆者の個人的に行っている方法と、パソコンの仕様に基づいた注意点も解説しています。参考までに読んでいっていただけると嬉しいです。
+">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miharu.blog/htmlBlogSource/2.html">
+    
+    <meta property="og:site_name" content="みはるのホームページ">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    
+    
+    <meta name="twitter:title" content="データ管理円滑化の方法7選!">
+    <meta name="twitter:description" content="この記事ではデータ管理を楽にする方法を紹介していきます。筆者の個人的に行っている方法と、パソコンの仕様に基づいた注意点も解説しています。参考までに読んでいっていただけると嬉しいです。
+">
+    <meta name="twitter:url" content="https://miharu.blog/htmlBlogSource/2.html">
+    <meta name="twitter:domain" content="miharu.blog"><meta name="keywords" content="データ整理,命名方法,データ管理"></head>
+
+<body>
+    <header><!-- headerタグに入るもの -->
+<span id="title"><a href="https://miharu.blog/">O miharu</a></span>
+<button id="phoneMenuButton"><span class="material-icons">menu</span></button>
+<nav>
+    <ul class="phoneMenuTitle">
+        <li>メニュー</li>
+    </ul>
+    <ul>
+        <li><a href="https://miharu.blog/">ホーム</a></li>
+        <li><a href="https://miharu.blog/#blogList">記事一覧</a></li>
+        <li><a href="https://miharu.blog/#about">このサイトについて</a></li>
+    </ul>
+    <ul>
+        <li>
+            <span id="blogQuantity">記事数: 23</span>
+        </li>
+    </ul>
+</nav>
+<script>
+    //@ts-check
+    const phoneMenuButton = document.getElementById("phoneMenuButton");
+    const header = document.querySelector("header");
+    const nav = header?.querySelector("nav");
+    if (!nav || !phoneMenuButton) throw new Error("nav or phoneMenuButton is null");
+    phoneMenuButton.addEventListener("click", () => {
+        if (nav.classList.contains("view")) nav.classList.remove("view");
+        else nav.classList.add("view");
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 700) {
+            if (nav.classList.contains("view")) nav.classList.remove("view");
+        }
+    });
+</script>
+</header>
+    <main>
+        <section id="content">
+        <h1>データ管理円滑化の方法7選!</h1><span class="status">ジャンル: Storage　記事作成日: 2024/11/16　タグ: データ管理、データ整理、命名方法</span><p><strong>この記事は現在執筆中により不完全な内容が記載されている恐れがあります。申し訳ありませんが、参考程度にお願いいたします。</strong>もし記事の内容が空っぽである場合、ほかのサイトへ回っていただくことをおすすめします。</p><h2 id="本題">本題</h2><p>この記事ではデータ管理を楽にする方法を紹介していきます。筆者の個人的に行っている方法と、パソコンの仕様に基づいた注意点も解説しています。参考までに読んでいっていただけると嬉しいです。</p>
+<div class="indexBox"><span><p>目次</p><ol class="indexOl"><li><a href="#本題">本題</a></li><li><a href="#ファイル名、フォルダ名の注意">ファイル名、フォルダ名の注意</a></li><li><a href="#時間をファイル名に書く">時間をファイル名に書く</a></li><li><a href="#ジャンル毎にフォルダを作る">ジャンル毎にフォルダを作る</a></li><li><a href="#Windowsライブラリを活用する">Windowsライブラリを活用する</a></li><li><a href="#ファイル名は端的に">ファイル名は端的に</a></li><li><a href="#使い終わったらzipにしよう！">使い終わったらzipにしよう！</a></li><li><a href="#同種同名ファイルは連番で記録">同種同名ファイルは連番で記録</a></li><li><a href="#最後に">最後に</a></li><li><a href="#参考文献">参考文献</a></li></ol></span></div><h2 id="ファイル名、フォルダ名の注意">ファイル名、フォルダ名の注意</h2>
+<p>ファイルやフォルダに名前を付けるとき、少し変わった文字や記号を使うと、ほかのプロジェクトに移植したり、データを移動する際にバグが発生してしまいます。ファイル名は次の方法に従いましょう。</p>
+<ol>
+<li>出来ることなら半角の英数字のみを使う</li>
+<li>記号は半角に統一する<ol>
+<li><code>-</code>(ハイフン)と<code>()</code>(カッコ)だけを使うようにする</li>
+<li><code>.</code>(ドット)は使えるが、場合により誤動作の影響となるので注意</li>
+<li><code>_</code>(アンダーバー)でもいいが、<code>-</code>の方が視認性が高い<a href="https://note.com/dtp_tranist/n/naab5c9221cce">^1</a></li>
+</ol>
+</li>
+<li>全角はひらがなとカタカナ、漢字だけにする<ol>
+<li>濁点と半濁点は可能であれば避ける。が、しなくても構わない<a href="https://note.com/dtp_tranist/n/naab5c9221cce">^1</a></li>
+</ol>
+</li>
+<li>数字は半角にする</li>
+<li><code>！</code>(感嘆符)と<code>？</code>(疑問符)、スペースは絶対に使用しない</li>
+</ol>
+<p>記入の注意点は以上です。これらを厳守すれば、ファイル管理の際にエラーに悩まされることはありません。</p>
+<h2 id="時間をファイル名に書く">時間をファイル名に書く</h2>
+<p>これはメジャーな管理方法です。ファイルの最初に時間を表記することで、名前順にソートした際、上から順に時間でファイルが整理されていきます。Windowsやmacはファイル自体に時間情報を記録することがありますが、誰かと共有したファイルの場合、それらの情報が不明瞭になることがあるので、ファイル名に時間を書くことをお勧めします。</p>
+<p>例はこんな感じです。</p>
+<pre><code class="hljs txt">- R6.6紹介記事原本.md
+- R6.11.16イラストの描き方.txt</code></pre><p>書き方の意味としては、OO.XX.VVとして、OOに年度、XXに月、VVに任意ですが、日付を書きます。が日付は書かなくても構いません。日付は大量の書類がある場所において重要ですが、そうでない場合は利用しないことをお勧めします。</p>
+<h2 id="ジャンル毎にフォルダを作る">ジャンル毎にフォルダを作る</h2>
+<p>これは筆者がよく行う方法ですが、次のようなフォルダ構成です。</p>
+<pre><code class="hljs txt">- 映像
+    - YouTube投稿動画
+    - iPhone撮影
+    - OBS撮影
+- 書類
+    - 学校
+    - PCメンテ
+    - Web説明
+- 曲
+    - ダウンロードした曲
+    - 効果音</code></pre><p>これはあくまで例ですが、大きなジャンルの中に細かいジャンルとすることで、かなり見やすい構成になります。</p>
+<h2 id="Windowsライブラリを活用する">Windowsライブラリを活用する</h2>
+<p>Windowsには標準で６種類のディレクトリ(フォルダ)があります。</p>
+<p>このフォルダがあらかじめ用意されているので、うまいこと活用しましょう。例えば次の方法がおすすめです。箇条書きで説明します。</p>
+<ul>
+<li>ダウンロード<ol>
+<li>ダウンロードしたファイルが散乱する</li>
+<li>ダウンロードしたジャンル毎に分ける</li>
+<li>定期的に整理する</li>
+</ol>
+</li>
+<li>ドキュメント<ol>
+<li>Office系のプロジェクトを保存する</li>
+<li>整理をしていないフォルダを入れる<ol>
+<li>フォルダに入れるときは日付をつけてから入れる</li>
+</ol>
+</li>
+<li>事務的なデータを保管する</li>
+</ol>
+</li>
+<li>デスクトップ<ol>
+<li>共有書類を一時的に配置する</li>
+<li>多くのファイルを配置しないこと</li>
+</ol>
+</li>
+<li>ピクチャ<ol>
+<li>スクリーンショットなどが自動で記録されている</li>
+<li>スマホやデジカメで撮影した画像・映像を保管する</li>
+<li>イラストを記録する</li>
+<li>グラフィック関連のプロジェクトを保管する</li>
+<li>画像素材を保存する</li>
+</ol>
+</li>
+<li>ビデオ<ol>
+<li>画面収録データを記録する</li>
+<li>映像しか入っていないフォルダを保存する</li>
+<li>映像以外のデータを保存しない</li>
+<li>動画編集プロジェクトを保存する</li>
+</ol>
+</li>
+<li>ミュージック<ol>
+<li>曲・効果音、ボイスレコーダ等を保存する</li>
+<li>作曲に関するプロジェクトを保存する</li>
+<li>作曲系のプロジェクトを保存する</li>
+</ol>
+</li>
+</ul>
+<p>こうすることで大きなジャンルごとに分かれるため、探すのが楽になります。</p>
+<h2 id="ファイル名は端的に">ファイル名は端的に</h2>
+<p>ファイル名は重要です。これは用途によりますが、次のような名づけ方がおすすめです。</p>
+<ol>
+<li>共通名称はフォルダでまとめ、ファイル名を短くする</li>
+<li>長い固有名詞は省略されたものがあれば、それを使用する<ol>
+<li>他人と共有するものである場合、その情報が伝わるようにする</li>
+<li>情報を共有しない場合はその記述方法を利用しない</li>
+</ol>
+</li>
+<li>連番で数字を大量に使用しない。例:<code>0001</code>、良い例:<code>1</code></li>
+</ol>
+<p>これらを意識するだけでも、かなり見渡しの良いものとなるかと思います。</p>
+<h2 id="使い終わったらzipにしよう！">使い終わったらzipにしよう！</h2>
+<p>プロジェクトフォルダなどは役を終えたらzip化し、アーカイブとして保管しましょう。それを行うことによって、システムディスクへの負担を下げ、パソコンの動作が快適になります。</p>
+<p>そして、１年間でアーカイブが多くたまったり、ファイル単位での使い終わったプロジェクトがあれば、「２０２４年度.zip」などの年でアーカイブを取る方法をおすすめします。</p>
+<h2 id="同種同名ファイルは連番で記録">同種同名ファイルは連番で記録</h2>
+<p>全くファイル名が一緒だったり、種類が一緒だが内容に差異がある(例えば漫画のページごとの画像など)ものは、連番で保存しましょう。次のデータを例にあげます。</p>
+<pre><code class="hljs txt">- イラスト場面1.png
+- イラスト場面2.png
+- イラスト場面3.png</code></pre><p>このような連番で記録することで、同じ名称のデータを管理することができます。ですが、ファイル数が増すとフォルダ内一覧が多くなってしまうので、フォルダにまとめて、連番だけを書く方法もおすすめです。</p>
+<pre><code class="hljs txt">- R6.4イラスト場面
+    - 1.png
+    - 2.png
+    - 3.png</code></pre><p>連番で保存する場合のコツは以上です。</p>
+<h2 id="最後に">最後に</h2>
+<p>この記事をご覧いただきありがとうございました。データ管理のコツとして名前の付け方や、ファイルの保存場所についての解説をしました。</p>
+<p>もしより良い方法があれば、X(旧Twitter)でその方法と「@kazunami36_sum1」とメンションを入れてつぶやいていただけたら幸いです。</p>
+<p>この記事が気に入ったらこのサイトをブックマークしていただくか、<a href="https://miharu.blog">miharu.blog</a>をブックマークしていただき、ほかの記事もぜひご覧ください。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://note.com/dtp_tranist/n/naab5c9221cce">ファイル名などに使うのを避けたい文字</a></li>
+</ul>
+</section>
+    </main>
+    <footer>
+        <section>
+            <p>miharu.blog はお問い合わせの受付を「みはるのサーバー」で受けつけています。Discord招待リンク <a href="https://discord.gg/bhjEGVsejx">https://discord.gg/bhjEGVsejx</a>にアクセスしていただくと、Discordサーバーに参加することができます。
+            </p>
+            <p>現在このサイトは記事を見ることに特化したサイトとなっております。</p>
+            <p><small>© 2025 miharu</small></p>
+        </section>
+    </footer>
+
+
+
+</body></html>

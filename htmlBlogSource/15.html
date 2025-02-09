@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"><meta charset="utf-8">
+<meta name="viewport" content="width=240,initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1142255994512706">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1142255994512706" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" href="https://miharu.blog/imageSource/ogp.png">
+
+    <title>GBとGiBって何が違うの?を解説! - miharu</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
+    <script src="../imagePreviewScript.js"></script>
+    <meta name="description" content="この記事では「GB」と「GiB」の違い、そして誤解を解くための解説を込みに説明していきます。
+">
+    <meta property="og:title" content="GBとGiBって何が違うの?を解説!">
+    <meta property="og:description" content="この記事では「GB」と「GiB」の違い、そして誤解を解くための解説を込みに説明していきます。
+">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://miharu.blog/htmlBlogSource/15.html">
+    
+    <meta property="og:site_name" content="みはるのホームページ">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    
+    
+    <meta name="twitter:title" content="GBとGiBって何が違うの?を解説!">
+    <meta name="twitter:description" content="この記事では「GB」と「GiB」の違い、そして誤解を解くための解説を込みに説明していきます。
+">
+    <meta name="twitter:url" content="https://miharu.blog/htmlBlogSource/15.html">
+    <meta name="twitter:domain" content="miharu.blog"><meta name="keywords" content="バイト,ビバイト,単位,データ,容量"></head>
+
+<body>
+    <header><!-- headerタグに入るもの -->
+<span id="title"><a href="https://miharu.blog/">O miharu</a></span>
+<button id="phoneMenuButton"><span class="material-icons">menu</span></button>
+<nav>
+    <ul class="phoneMenuTitle">
+        <li>メニュー</li>
+    </ul>
+    <ul>
+        <li><a href="https://miharu.blog/">ホーム</a></li>
+        <li><a href="https://miharu.blog/#blogList">記事一覧</a></li>
+        <li><a href="https://miharu.blog/#about">このサイトについて</a></li>
+    </ul>
+    <ul>
+        <li>
+            <span id="blogQuantity">記事数: 23</span>
+        </li>
+    </ul>
+</nav>
+<script>
+    //@ts-check
+    const phoneMenuButton = document.getElementById("phoneMenuButton");
+    const header = document.querySelector("header");
+    const nav = header?.querySelector("nav");
+    if (!nav || !phoneMenuButton) throw new Error("nav or phoneMenuButton is null");
+    phoneMenuButton.addEventListener("click", () => {
+        if (nav.classList.contains("view")) nav.classList.remove("view");
+        else nav.classList.add("view");
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 700) {
+            if (nav.classList.contains("view")) nav.classList.remove("view");
+        }
+    });
+</script>
+</header>
+    <main>
+        <section id="content">
+        <h1>GBとGiBって何が違うの?を解説!</h1><span class="status">ジャンル: Storage　記事作成日: 2024/11/26　記事更新日: 2024/11/27　タグ: 容量、バイト、ビバイト、単位、データ</span><p>この記事では「GB」と「GiB」の違い、そして誤解を解くための解説を込みに説明していきます。</p>
+<div class="indexBox"><span><p>目次</p><ol class="indexOl"><li><a href="#読み方">読み方</a></li><li><a href="#誤解を解く">誤解を解く</a></li><li><a href="#SI接頭語と2進接頭辞">SI接頭語と2進接頭辞</a></li><ol><li><a href="#SI接頭語とは">SI接頭語とは</a></li><li><a href="#2進接頭辞">2進接頭辞</a></li></ol><li><a href="#計算方法">計算方法</a></li><li><a href="#最後に">最後に</a></li><li><a href="#参考文献">参考文献</a></li></ol></span></div><h2 id="読み方">読み方</h2>
+<p>GBは「ギガバイト」と読み、GiBは「ギビバイト」と読みます。これについての詳しい説明を後半でどんどん解説していきます。</p>
+<h2 id="誤解を解く">誤解を解く</h2>
+<p>Windowsなどで大きな容量のストレージを買ったとき、<strong>1TBのSSD</strong>なのに「<strong>931GBだった！</strong>」や、<strong>32GBのUSBメモリー</strong>がぴったりではなく「<strong>29GBしかない！</strong>」など、容量が<strong>少なかった経験</strong>はありませんか？</p>
+<p>その理由は「２進接頭辞(<strong>GiB</strong>)」と「SI接頭語(<strong>GB</strong>)」を<strong>誤って表示しているから</strong>です。</p>
+<p>Windowsでは実際の単位表示が**２進接頭辞(GiB)なのにもかかわらず、GB(SI接頭語)で表記しています。するとこのようなことが起こります。試しに計算します。</p>
+<pre><code class="hljs txt">1GB × 1000 × 1000 × 1000 = 1,000,000,000B
+1.000,000,000B ÷ 1024 ÷ 1024 ÷ 1024 = 0.931GiB</code></pre><p>この計算からわかることは、「<strong>1GB = 0.931GiB</strong>」つまり**減少しています。**SI接頭語(GB)から２進接頭辞(GiB)に変換すると、<strong>値が小さくなってしまうのです。</strong></p>
+<p>大抵のストレージはSI接頭語(GB)で値が綺麗に揃うように作られていますが、Windowsはそのストレージを２進接頭辞(GiB)で解釈してしまうため、このような表記ずれが起こってしまいます。さらに、Windowsがその２進接頭辞(GiB)のことをSI接頭語(GB)であるという表記をしてしまうため、混乱を招いています。</p>
+<p><strong>多少容量が少なくても、製品に支障はありませんので、ご安心ください。</strong></p>
+<h2 id="SI接頭語と2進接頭辞">SI接頭語と2進接頭辞</h2>
+<p>ここからは詳しい解説を行っていきます。</p>
+<p>容量の単位には、「SI接頭語」と「2進接頭辞」という概念があり、それぞれを使い分けて容量を表現しています。わかりやすく解説していきます。</p>
+<p>先に要約すると、</p>
+<ul>
+<li>1GB = SI接頭語</li>
+<li>1GiB = 2進接頭辞</li>
+</ul>
+<p>です。これを覚えておきましょう。</p>
+<p>ここから先は専門用語が飛び交うので、飛ばしても構いません</p>
+<h3 id="SI接頭語とは">SI接頭語とは</h3>
+<p>SI接頭語は「エスアイ せっとうご」と読みます。SI接頭語とは、<strong>国際的に定義された単位</strong>を表すものです。</p>
+<p>よく使われるのはk(キロ)とm(メートル)を合わせてkm(キロメートル)と読む、これもSI接頭語の概念によって定まっている単位です。この場合、SI接頭語ではkを「<strong>接頭語記号(せっとうご きごう)</strong>」と言います。<a href="https://ja.wikipedia.org/wiki/SI%E6%8E%A5%E9%A0%AD%E8%AA%9E">^2</a></p>
+<p>そして、パソコンでよく使われる単位「GB(ギガバイト)」は<strong>G(ギガ)<strong>が</strong>接頭語記号</strong>です。K(キロ)、M(メガ)も同様です。そして、B(バイト)は情報量の単位のことを表します。<a href="https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88_(%E6%83%85%E5%A0%B1)">^4</a></p>
+<pre><code class="hljs txt">K(接頭語記号) + B(情報量単位) = KB(キロバイト)</code></pre><p>SI接頭語で使われる単位の具体的な数字は以下です。</p>
+<pre><code class="hljs txt">1KB(1 キロ バイト) = 1,000B(1000 バイト)
+1MB(1 メガ バイト) = 1,000KB(1000 キロ バイト) = 1,000,000B(バイト)
+1GB(1 キロ バイト) = 1,000MB(1000 メガ バイト) = 1,000,000,000B(バイト)
+1TB(1 テラ バイト) = 1,000GB(1000 ギガ バイト) = 1,000,000,000,000B(バイト)
+1PB(1 ペタ バイト) = 1,000TB(1000 テラ バイト) = 1,000,000,000,000,000B(バイト)</code></pre><p>そして、以降の数字があまり触れることのない単位です。</p>
+<pre><code class="hljs txt">1EB(1 エクサ バイト) = 1,000PB(1000 ペタ バイト) = 1,000,000,000,000,000,000B(バイト)
+1ZB(1 ゼタ バイト) = 1,000EB(1000 エクサ バイト) = 1,000,000,000,000,000,000,000B(バイト)
+1YB(1 ヨタ バイト) = 1,000ZB(1000 ゼタ バイト) = 1,000,000,000,000,000,000,000,000B(バイト)
+1RB(1 ロナ バイト) = 1,000YB(1000 ヨタ バイト) = 1,000,000,000,000,000,000,000,000,000B(バイト)
+1QB(1 クエタ バイト) = 1,000RB(1000 ロナ バイト) = 1,000,000,000,000,000,000,000,000,000,000B(バイト)</code></pre><p>このように、1000倍毎に単位を変えているのがSI接頭語です。</p>
+<h3 id="2進接頭辞">2進接頭辞</h3>
+<p>２進接頭辞は「にしん せっとうじ」と読みます。<strong>SI接頭語と区別</strong>するために、SI接頭語の後に定義されたものです。特徴は「KB」ではなく「<strong>i</strong>」を含んだ「KiB(キビバイト)」という表現になることです。<a href="https://ja.wikipedia.org/wiki/2%E9%80%B2%E6%8E%A5%E9%A0%AD%E8%BE%9E">^3</a></p>
+<p>SI接頭語との違いは、1000倍毎ではなく、<strong>1024倍</strong>毎です。なぜ1024という数字が表れるのかというと、コンピューターでは２の累乗の１つである「８」を基礎にした単位「B(バイト)」を使用するためです。このバイトの由来は、デジタルで利用される「<strong>２進数</strong>」によるものです。</p>
+<p>２進接頭辞はSI接頭語と明確に区別するために作られたものですが、現在のコンピューター社会ではなじまない言葉として、<strong>混乱を招く単位</strong>です。ですが２進接頭辞は初期のコンピューターで<strong>当たり前のように利用された単位</strong>であるため、<strong>切っても切り離せない存在</strong>となっています。</p>
+<p>２進接頭辞は「B(バイト)」には適用されませんが、「KB(キロバイト)」以降には適用できます。</p>
+<pre><code class="hljs txt">K(接頭語記号) + i(２進接頭辞特有の記号) + B(情報量単位) = KiB(キビバイト)</code></pre><p>２進接頭辞で使われる単位の具体的な数字は以下です。</p>
+<pre><code class="hljs txt">1KiB(1 キビ バイト) = 1,024B(1024 バイト)
+1MiB(1 メビ バイト) = 1,024KiB(1024 キビ バイト) = 1,048,576B(バイト)
+1GiB(1 キビ バイト) = 1,024MiB(1024 メビ バイト) = 1,073,741,824B(バイト)
+1TiB(1 テビ バイト) = 1,024GiB(1024 ギビ バイト) = 1,099,511,627,776B(バイト)
+1PiB(1 ペビ バイト) = 1,024TiB(1024 テビ バイト) = 1,125,899,906,842,624B(バイト)</code></pre><p>そして、以降の数字があまり触れることのない単位です。</p>
+<pre><code class="hljs txt">1EiB(1 エクスビ バイト) = 1,024PiB(1024 ペビ バイト) = 1,152,921,504,606,846,976B(バイト)
+1ZiB(1 ゼビ バイト) = 1,024EiB(1024 エクスビ バイト) = 1,180,591,620,717,411,303,424B(バイト)
+1YiB(1 ヨビ バイト) = 1,024ZiB(1024 ゼビ バイト) = 1,208,925,819,614,629,174,706,176B(バイト)
+1RiB(1 ロビ バイト) = 1,024YiB(1024 ヨビ バイト) = 1,237,940,039,285,380,274,899,124,224B(バイト)
+1QiB(1 クエビ バイト) = 1,024RiB(1024 ロビ バイト) = 1,267,650,600,228,229,401,496,703,205,376B(バイト)</code></pre><p>２進接頭辞はバイトの部分を見るとわかりますが、とても複雑な数字を表しています。この単位とSI接頭語を混ぜて使うと、容量の計算がかみ合わないなどの問題があり、注意が必要です。</p>
+<h2 id="計算方法">計算方法</h2>
+<p>もしGiB(ギビバイト)という単位を見つけ、GB(ギガバイト)に変換したい場合、次のような計算をしましょう。</p>
+<p><strong>GB</strong>はBから<strong>1000で3回掛けたもの</strong>です。そして<strong>GiB</strong>はBから<strong>1024で3回掛けたもの</strong>です。なので、GiBからBを算出する方法として、<strong>GiB</strong>に<strong>1024を3回掛けましょう。<strong>そして、Bから</strong>GB</strong>に変えるときは、**3回割ります。**以下は例です。</p>
+<pre><code class="hljs txt">1GiB × 1024 × 1024 × 1024 = 1,073,741,824B
+1,073,741,824B ÷ 1000 ÷ 1000 ÷ 1000 = 1.07GB</code></pre><p>1.07GBという結果になりました。<strong>1GiBは1.07GBと同じ</strong>、ということになります。</p>
+<p>以下は計算表です。ご参考に。</p>
+<pre><code class="hljs txt">1KB = 1B × 1000
+1MB = 1B × 1000 × 1000
+1GB = 1B × 1000 × 1000 × 1000
+1TB = 1B × 1000 × 1000 × 1000 × 1000
+1PB = 1B × 1000 × 1000 × 1000 × 1000 × 1000
+1EB = 1B × 1000 × 1000 × 1000 × 1000 × 1000 × 1000
+1ZB = 1B × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000
+1YB = 1B × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000
+1RB = 1B × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000
+1QB = 1B × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000 × 1000
+
+1KiB = 1B × 1024
+1MiB = 1B × 1024 × 1024
+1GiB = 1B × 1024 × 1024 × 1024
+1TiB = 1B × 1024 × 1024 × 1024 × 1024
+1PiB = 1B × 1024 × 1024 × 1024 × 1024 × 1024
+1EiB = 1B × 1024 × 1024 × 1024 × 1024 × 1024 × 1024
+1ZiB = 1B × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024
+1YiB = 1B × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024
+1RiB = 1B × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024
+1QiB = 1B × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024 × 1024</code></pre><p>単位からB(バイト)に変換したいときは、逆算で割っていく必要があります。そうして相互変換が可能です。</p>
+<h2 id="最後に">最後に</h2>
+<p>この記事ではGBとGiBの違いについて紹介しました。単位の誤解を解くことと、GBとGiBを正しく使えるようになることを願います。ですが個人的には、Windowsが配慮しないと難しいことだと思います。</p>
+<p>この記事が気に入ったらこのサイトをブックマークしていただくか、<a href="https://miharu.blog">miharu.blog</a>をブックマークしていただき、ほかの記事もぜひご覧ください。</p>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://www.dainippon-tosho.co.jp/unit/si_prefix.html">SI接頭語 | 単位プラス - 大日本図書</a></li>
+</ul>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/SI%E6%8E%A5%E9%A0%AD%E8%AA%9E">SI接頭語 - Wikipedia</a></li>
+</ul>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/2%E9%80%B2%E6%8E%A5%E9%A0%AD%E8%BE%9E">2進接頭辞 - Wikipedia</a></li>
+</ul>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88_(%E6%83%85%E5%A0%B1)">バイト (情報) - Wikipedia</a></li>
+</ul>
+</section>
+    </main>
+    <footer>
+        <section>
+            <p>miharu.blog はお問い合わせの受付を「みはるのサーバー」で受けつけています。Discord招待リンク <a href="https://discord.gg/bhjEGVsejx">https://discord.gg/bhjEGVsejx</a>にアクセスしていただくと、Discordサーバーに参加することができます。
+            </p>
+            <p>現在このサイトは記事を見ることに特化したサイトとなっております。</p>
+            <p><small>© 2025 miharu</small></p>
+        </section>
+    </footer>
+
+
+
+</body></html>
