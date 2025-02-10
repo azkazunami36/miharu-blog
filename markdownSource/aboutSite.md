@@ -37,6 +37,6 @@
 ### サイトのシステムについて
 このサイトはほとんどを静的コンテンツで動作するようにしています。それにより、動作がとても快適になるようになっています。
 
-このサイトの更新にかかわるシステムはGitHub「[miharuServerContent](https://github.com/azkazunami36/miharuServerContent)」をご覧ください。このリポジトリはマークダウンファイルと記事情報JSONを解析しHTMLファイルに変換するシステムです。このリポジトリが公開されている理由は、クライアントサイドが直接このスクリプトにアクセスするのを阻止するためです。
+このサイトの更新にかかわるシステムはGitHub「[miharuServerContent](https://github.com/azkazunami36/miharuServerContent)」をご覧ください。このリポジトリはマークダウンファイルと記事情報JSONを解析しHTMLファイルに変換するシステムです。このリポジトリが公開されている理由は、[miharu.blog](https://miharu.blog)を経由してこのスクリプトにアクセスするのを阻止するために、それらプログラムをリポジトリとして隔離したためです。
 
-この記事のマークダウンにアクセスする場合は、直接この[miharu.blog](https://miharu.blog)からアクセスすることが可能です。
+この記事のマークダウンにアクセスする場合は、「[miharu-blog](https://github.com/azkazunami36/miharu-blog)」からアクセスすることができます。[miharu.blog](https://miharu.blog)と内容は同じですが、GitHub上でのわかりやすい操作が可能です。
