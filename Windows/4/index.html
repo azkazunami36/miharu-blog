@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"><meta charset="utf-8">
+<meta name="viewport" content="width=240,initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1142255994512706">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1142255994512706" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" href="https://www.miharu.blog/src/img/ogp.png">
+<link rel="manifest" href="https://www.miharu.blog/manifest.json">
+<script type="application/ld+json">
+    {
+      "name": "みはるのホームページ",
+      "url": "https://www.miharu.blog"
+    }
+</script>
+
+    <title>Windows初期化の方法! - miharu</title>
+    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
+    <script src="../../src/imagePreviewScript.js"></script>
+    <meta name="description" content="Windowsの初期化の方法について解説します。初期化の方法だけでなく、クリーンインストールの方法も解説します。
+">
+    <meta property="og:title" content="Windows初期化の方法!">
+    <meta property="og:description" content="Windowsの初期化の方法について解説します。初期化の方法だけでなく、クリーンインストールの方法も解説します。
+">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.miharu.blog/Windows/4/">
+    
+    <meta property="og:site_name" content="みはるのホームページ">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    
+    
+    <meta name="twitter:title" content="Windows初期化の方法!">
+    <meta name="twitter:description" content="Windowsの初期化の方法について解説します。初期化の方法だけでなく、クリーンインストールの方法も解説します。
+">
+    <meta name="twitter:url" content="https://www.miharu.blog/Windows/4/">
+    <meta name="twitter:domain" content="www.miharu.blog"><meta name="keywords" content="Windows,クリーンインストール,初期化,リセット,削除"></head>
+
+<body>
+    <header><!-- headerタグに入るもの -->
+<span id="title"><a href="https://www.miharu.blog/">O miharu</a></span>
+<button id="phoneMenuButton"><span class="material-icons">menu</span></button>
+<nav>
+    <ul class="phoneMenuTitle">
+        <li>メニュー</li>
+    </ul>
+    <ul>
+        <li><a href="https://www.miharu.blog/">ホーム</a></li>
+        <li><a href="https://www.miharu.blog/#blogList">記事一覧</a></li>
+        <li><a href="https://www.miharu.blog/#about">このサイトについて</a></li>
+    </ul>
+    <ul>
+        <li>
+            <span id="blogQuantity">記事数: 23</span>
+        </li>
+    </ul>
+</nav>
+<script>
+    //@ts-check
+    const phoneMenuButton = document.getElementById("phoneMenuButton");
+    const header = document.querySelector("header");
+    const nav = header?.querySelector("nav");
+    if (!nav || !phoneMenuButton) throw new Error("nav or phoneMenuButton is null");
+    phoneMenuButton.addEventListener("click", () => {
+        if (nav.classList.contains("view")) nav.classList.remove("view");
+        else nav.classList.add("view");
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 700) {
+            if (nav.classList.contains("view")) nav.classList.remove("view");
+        }
+    });
+</script>
+</header>
+    <main>
+        <section id="content">
+        <h1>Windows初期化の方法!</h1><span class="status">ジャンル: Windows　記事作成日: 2024/11/16　タグ: 削除、Windows、クリーンインストール、初期化、リセット</span><p><strong>この記事は現在執筆中により不完全な内容が記載されている恐れがあります。申し訳ありませんが、参考程度にお願いいたします。</strong>もし記事の内容が空っぽである場合、ほかのサイトへ回っていただくことをおすすめします。</p><h2 id="本題">本題</h2><p>Windowsの初期化の方法について解説します。初期化の方法だけでなく、クリーンインストールの方法も解説します。</p>
+<div class="indexBox"><span><p>目次</p><ol class="indexOl"><li><a href="#本題">本題</a></li><li><a href="#初期化">初期化</a></li><ol><li><a href="#バックアップ">バックアップ</a></li><li><a href="#削除">削除</a></li><li><a href="#セットアップ">セットアップ</a></li></ol><li><a href="#クリーンインストール">クリーンインストール</a></li><ol><li><a href="#準備">準備</a></li><li><a href="#バックアップ">バックアップ</a></li><li><a href="#USBから起動">USBから起動</a></li><li><a href="#データを消してインストール">データを消してインストール</a></li><li><a href="#セットアップ">セットアップ</a></li><li><a href="#アップデート">アップデート</a></li></ol><li><a href="#最後に">最後に</a></li><li><a href="#環境">環境</a></li></ol></span></div><h2 id="初期化">初期化</h2>
+<p>初期化の場合は手順が簡単です。今から方法を紹介していきます。</p>
+<h3 id="バックアップ">バックアップ</h3>
+<p>まずはバックアップを取ってください。バックアップにはさまざまな種類がありますが、今回は記事を紹介いたします。</p>
+<p>筆者が書いた記事「<a href="../htmlBlogSource/13.html">バックアップの方法を紹介!</a>」をご覧ください。</p>
+<h3 id="削除">削除</h3>
+<h3 id="セットアップ">セットアップ</h3>
+<h2 id="クリーンインストール">クリーンインストール</h2>
+<p>クリーンインストールはWindowsとパソコンを連携させる「ドライバ」の状態がおかしいなどの場合に効果的だったりします。様々な問題を解決するために、この方法を取ることも一つの手です。</p>
+<p>ですが、とても複雑な作業のため、慎重に行ってください。これを間違えると、パソコンが起動しなくなる恐れがあります。</p>
+<h3 id="準備">準備</h3>
+<h3 id="バックアップ">バックアップ</h3>
+<p>まずはバックアップを取ってください。バックアップにはさまざまな種類がありますが、今回は記事を紹介いたします。</p>
+<p>筆者が書いた記事「<a href="../htmlBlogSource/13.html">バックアップの方法を紹介!</a>」をご覧ください。</p>
+<h3 id="USBから起動">USBから起動</h3>
+<h3 id="データを消してインストール">データを消してインストール</h3>
+<h3 id="セットアップ">セットアップ</h3>
+<h3 id="アップデート">アップデート</h3>
+<h2 id="最後に">最後に</h2>
+<p>この記事ではWindowsの初期化の方法を紹介しました。参考になれば幸いです。この記事が気に入ったらこのサイトをブックマークしていただくか、<a href="https://miharu.blog">miharu.blog</a>をブックマークしていただき、ほかの記事もぜひご覧ください。</p>
+<h2 id="環境">環境</h2>
+<p>環境は以下です。パソコンに詳しい方などはここの内容は役立ちます。</p>
+<ul>
+<li>実行環境: Hyper-V</li>
+<li>CPU: Core i5-13600K(全コア割り当て)</li>
+<li>RAM: 16GB割り当て</li>
+<li>GPU: 割り当てていない</li>
+</ul>
+</section>
+    </main>
+    <footer>
+        <section>
+            <p>miharu.blog はお問い合わせの受付を「みはるのサーバー」で受けつけています。Discord招待リンク <a href="https://discord.gg/bhjEGVsejx">https://discord.gg/bhjEGVsejx</a>にアクセスしていただくと、Discordサーバーに参加することができます。
+            </p>
+            <p>現在このサイトは記事を見ることに特化したサイトとなっております。</p>
+            <p><small>© 2025 miharu</small></p>
+        </section>
+    </footer>
+
+
+
+</body></html>

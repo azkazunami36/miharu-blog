@@ -5,13 +5,13 @@
         {
             "purpose": "maskable",
             "sizes": "512x512",
-            "src": "imageSource/icon512_maskable.png",
+            "src": "src/img/icon512_maskable.png",
             "type": "image/png"
         },
         {
             "purpose": "any",
             "sizes": "512x512",
-            "src": "imageSource/icon512_rounded.png",
+            "src": "src/img/icon512_rounded.png",
             "type": "image/png"
         }
     ],
@@ -19,7 +19,7 @@
     "lang": "ja",
     "name": "みはるのホームページ",
     "short_name": "みはるブログ",
-    "start_url": "https://miharu.blog",
-    "scope": "https://miharu.blog",
+    "start_url": "https://www.miharu.blog",
+    "scope": "https://www.miharu.blog",
     "description": "みはるのホームページは貧乏学生が知識を無料で売るために作ったサイトです。"
 }
