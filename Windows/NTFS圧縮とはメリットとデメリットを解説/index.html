@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="ja"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"><meta charset="utf-8">
+<meta name="viewport" content="width=240,initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-1142255994512706">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1142255994512706" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="icon" href="https://www.miharu.blog/src/img/ogp.png">
+<link rel="manifest" href="https://www.miharu.blog/manifest.json">
+<script type="application/ld+json">
+    {
+      "name": "みはるのホームページ",
+      "url": "https://www.miharu.blog"
+    }
+</script>
+
+    <title>NTFS圧縮とは?メリットとデメリットを解説! - miharu</title>
+    <link rel="stylesheet" href="../../src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
+    <script src="../../src/imagePreviewScript.js"></script>
+    <meta name="description" content="皆さんはNTFS圧縮をご存じですか？NTFS圧縮は名前の通り圧縮機能なのですが、zipファイルなどにしなくとも容量を削減できる優れモノです。しかし、良いことだらけではなく、デメリットなどもあるため、今回はそれらについて解説していきます。
+">
+    <meta property="og:title" content="NTFS圧縮とは?メリットとデメリットを解説!">
+    <meta property="og:description" content="皆さんはNTFS圧縮をご存じですか？NTFS圧縮は名前の通り圧縮機能なのですが、zipファイルなどにしなくとも容量を削減できる優れモノです。しかし、良いことだらけではなく、デメリットなどもあるため、今回はそれらについて解説していきます。
+">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.miharu.blog/Windows/NTFS圧縮とはメリットとデメリットを解説/">
+    
+    <meta property="og:site_name" content="みはるのホームページ">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    
+    
+    <meta name="twitter:title" content="NTFS圧縮とは?メリットとデメリットを解説!">
+    <meta name="twitter:description" content="皆さんはNTFS圧縮をご存じですか？NTFS圧縮は名前の通り圧縮機能なのですが、zipファイルなどにしなくとも容量を削減できる優れモノです。しかし、良いことだらけではなく、デメリットなどもあるため、今回はそれらについて解説していきます。
+">
+    <meta name="twitter:url" content="https://www.miharu.blog/Windows/NTFS圧縮とはメリットとデメリットを解説/">
+    <meta name="twitter:domain" content="www.miharu.blog"><meta name="keywords" content="Windows,NTFS,圧縮"></head>
+
+<body>
+    <header><!-- headerタグに入るもの -->
+<span id="title"><a href="https://www.miharu.blog/">O miharu</a></span>
+<button id="phoneMenuButton"><span class="material-icons">menu</span></button>
+<nav>
+    <ul class="phoneMenuTitle">
+        <li>メニュー</li>
+    </ul>
+    <ul>
+        <li><a href="https://www.miharu.blog/">ホーム</a></li>
+        <li><a href="https://www.miharu.blog/#blogList">記事一覧</a></li>
+        <li><a href="https://www.miharu.blog/#about">このサイトについて</a></li>
+    </ul>
+    <ul>
+        <li>
+            <span id="blogQuantity">記事数: 23</span>
+        </li>
+    </ul>
+</nav>
+<script>
+    //@ts-check
+    const phoneMenuButton = document.getElementById("phoneMenuButton");
+    const header = document.querySelector("header");
+    const nav = header?.querySelector("nav");
+    if (!nav || !phoneMenuButton) throw new Error("nav or phoneMenuButton is null");
+    phoneMenuButton.addEventListener("click", () => {
+        if (nav.classList.contains("view")) nav.classList.remove("view");
+        else nav.classList.add("view");
+    });
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 700) {
+            if (nav.classList.contains("view")) nav.classList.remove("view");
+        }
+    });
+</script>
+</header>
+    <main>
+        <section id="content">
+        <h1>NTFS圧縮とは?メリットとデメリットを解説!</h1><span class="status">ジャンル: Windows　記事作成日: 2025/1/11　タグ: 圧縮、Windows、NTFS</span><p><strong>この記事は現在執筆中により不完全な内容が記載されている恐れがあります。申し訳ありませんが、参考程度にお願いいたします。</strong>もし記事の内容が空っぽである場合、ほかのサイトへ回っていただくことをおすすめします。</p><h2 id="本題">本題</h2><p>皆さんはNTFS圧縮をご存じですか？NTFS圧縮は名前の通り圧縮機能なのですが、zipファイルなどにしなくとも容量を削減できる優れモノです。しかし、良いことだらけではなく、デメリットなどもあるため、今回はそれらについて解説していきます。</p>
+<div class="indexBox"><span><p>目次</p><ol class="indexOl"><li><a href="#本題">本題</a></li><li><a href="#NTFS圧縮">NTFS圧縮</a></li><li><a href="#メリット">メリット</a></li><li><a href="#デメリット">デメリット</a></li><li><a href="#まとめ">まとめ</a></li></ol></span></div><h2 id="NTFS圧縮">NTFS圧縮</h2>
+<p>NTFS圧縮はzip等と同様の「可逆圧縮/無損失圧縮」です。ただし、アルゴリズム(仕様)が異なるためzipより圧縮効率は控えめです。</p>
+<p>しかし、NTFS圧縮最大のメリットは「圧縮されていないかのように操作が出来る」ということです。例えば、zipファイルでは「展開」をするまで操作できませんが、NTFS圧縮は「そのまま」で操作できます。１つ１つの手間がないのにもかかわらず、容量を大きく空けることができるのが特徴です。</p>
+<h2 id="メリット">メリット</h2>
+<p>NTFS圧縮のメリットはなんといっても容量の節約です。32GBのUSBに一杯いっぱいデータを保存しても、NTFS圧縮を施すことで、通常500MB～2GBの空き容量が出来ます。</p>
+<p>さらに、このNTFS圧縮はデータが多くなればなるほどデータの圧縮率もあがります。それはNTFS圧縮のアルゴリズムに起因します。500GBのストレージであれば平均20GBの書き込みが可能で、3000GB(3TB)のストレージであれば、300GB以上書き込み量が増えます。筆者の環境では2000GBの物理データが1742GBに圧縮、258GBも追加で書き込めているので、効果は大きいと思われます。</p>
+<p>メリットはこれだけでは止まらず、SSD等の環境では空き容量は多い方がパフォーマンスがあがったり、寿命が延びたりしますが、このNTFS圧縮を行うことで、空き容量による長寿命化も可能です。</p>
+<p>上記のメリットは極端な運用をしない限り、全て得ることが可能です。使ってみてもよいかもしれません。しかし、場合によってはデメリットに遭遇するかもしれません。それも解説していきます。</p>
+<h2 id="デメリット">デメリット</h2>
+<p>NTFSのデメリットの最も大きいものは、速度が低下するか、CPU使用率が上がることです。NTFS圧縮は「圧縮処理」をしているため、負荷がかかります。それにより読み書き速度が落ちる可能性があります。読み込みは極端に下がることは稀ですが、書き込み速度は極めて下がりやすいです。</p>
+<p>次に、ファイルの断片化というのが起こることがあります。決してファイルが壊れるわけではありません。断片化とは、物理ストレージ上で記録されているファイルの場所がまばらになることで、読み込みの効率が下がる現象です。さらに、書き込みの際も所々に書き込まれるような状況に陥ります。その際に「デフラグ」または「最適化」という処理が必要です。これを行うことでパフォーマンスをぐっと上げることが可能ですが、とある状況下ではとんでもない時間を要することがあります。それは以下のタイミングです。</p>
+<ul>
+<li>ファイルを大量に移動した</li>
+<li>アプリケーションをNTFS圧縮が有効になっているディスクで行った</li>
+<li>小さなファイルが多数ある</li>
+<li>大容量のデータが蓄積している</li>
+<li>空き容量が少ない</li>
+</ul>
+<p>このタイミングでのデフラグは１日経っても終わらないことがほとんどです。筆者の環境で2TBのデータがあるディスクをデフラグした際には２日かかりました。そういったデメリットがありますが、筆者は容量を選び、運用を続けています。判断は自信で行いましょう。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>NTFS圧縮は速度を犠牲に、大容量を提供する機能です。データを保管するだけであったり、小さなストレージしか持っていない環境などで運用を続ける方はおすすめします。</p>
+</section>
+    </main>
+    <footer><section>
+    <p>miharu.blog はお問い合わせの受付を「みはるのサーバー」で受けつけています。Discord招待リンク <a href="https://discord.gg/bhjEGVsejx">https://discord.gg/bhjEGVsejx</a>にアクセスしていただくと、Discordサーバーに参加することができます。
+    </p>
+    <p>現在このサイトは記事を見ることに特化したサイトとなっております。そしてほとんどを静的コンテンツで動作するようにしています。それにより、動作がとても快適になるようになっています。</p>
+    <p>このサイトの更新にかかわるシステムはGitHub「<a href="https://github.com/azkazunami36/miharuServerContent">miharuServerContent</a>」をご覧ください。このリポジトリはマークダウンファイルと記事情報JSONを解析しHTMLファイルに変換するシステムです。このリポジトリが公開されている理由は、<a href="https://www.miharu.blog">miharu.blog</a>を経由してこのスクリプトにアクセスするのを阻止するために、それらプログラムをリポジトリとして隔離したためです。</p>
+    <p>この記事は、GitHub「<a href="https://github.com/azkazunami36/miharu-blog">miharu-blog</a>」によって開設されています。</p>
+    <p><small>© 2025 miharu</small></p>
+</section>
+</footer>
+
+
+
+</body></html>
