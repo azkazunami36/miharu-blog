@@ -1,0 +1,25 @@
+{
+    "theme_color": "#8936FF",
+    "background_color": "#2EC6FE",
+    "icons": [
+        {
+            "purpose": "maskable",
+            "sizes": "512x512",
+            "src": "imageSource/icon512_maskable.png",
+            "type": "image/png"
+        },
+        {
+            "purpose": "any",
+            "sizes": "512x512",
+            "src": "imageSource/icon512_rounded.png",
+            "type": "image/png"
+        }
+    ],
+    "display": "browser",
+    "lang": "ja",
+    "name": "みはるのホームページ",
+    "short_name": "みはるブログ",
+    "start_url": "https://miharu.blog",
+    "scope": "https://miharu.blog",
+    "description": "みはるのホームページは貧乏学生が知識を無料で売るために作ったサイトです。"
+}
