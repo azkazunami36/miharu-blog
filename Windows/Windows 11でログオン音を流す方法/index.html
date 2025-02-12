@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
     <script src="../../src/imagePreviewScript.js"></script>
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const content = document.getElementById("content");
+            const imgs = content.querySelectorAll("img");
+            for (const img of imgs) {
+                img.src = ratioReplace(img.src, 850, 400);
+                img.addEventListener("mouseover", () => { img.src = ratioReplace(img.src, 850, 400); });
+                img.addEventListener("touchstart", () => { img.src = ratioReplace(img.src, 850, 400); });
+            }
+        })
+    </script>
     <meta name="description" content="この記事では、Windows 11でログオン・ログオフの音を流す方法を紹介します。方法もとても簡単なので、ぜひ読んでいってください。Windows 11だけでなく、Windows 10やその他タスクスケジューラを利用できるWindowsであれば利用できるので、ぜひ応用してみてください。大雑把な解説が見たい場合はまとめをご覧ください。
 ">
     <meta property="og:title" content="Windows 11でログオン音を流す方法!">
@@ -80,10 +93,10 @@
 <p>この方法ではタスクスケジューラーを使う方法です。タスクスケジューラーは次の方法で開くことができます。</p>
 <ol>
 <li><p>Windowsキーまたはスタートボタンを押す
-<img src="./image2.png" alt="スタート画面"></p>
+<img src="../../src/img/WindowsWindows 11でログオン音を流す方法.image2.png@850x400-1x.webp" alt="スタート画面" data-original="./image2.png"></p>
 </li>
 <li><p>検索欄から「タスクスケジューラ」と打つ。注意として「タスクスケジューラー」ではない。
-<img src="./image.png" alt="検索画面"></p>
+<img src="../../src/img/WindowsWindows 11でログオン音を流す方法.image.png@850x400-1x.webp" alt="検索画面" data-original="./image.png"></p>
 </li>
 <li><p>先頭に出たタスクスケジューラをクリックする。この時、アイコンが違っている場合は、アプリではないものが開いてしまうので注意。</p>
 </li>
@@ -92,14 +105,14 @@
 <h2 id="タスクの作成">タスクの作成</h2>
 <p>ここからはタスクを作成していきます。一つ一つ方法を説明していきます。</p>
 <p>まず左にあるサイドバーの項目「タスクスケジューラ ライブラリ」をクリックします。
-<img src="./image3.png" alt="サイドバー画面の一部"></p>
+<img src="../../src/img/WindowsWindows 11でログオン音を流す方法.image3.png@850x400-1x.webp" alt="サイドバー画面の一部" data-original="./image3.png"></p>
 <p>次に右側にある「基本タスクの作成...」をクリックします。</p>
 <p>すると次の画面が現れます。
-<img src="./image4.png" alt="タスク作成ウィザードの画面"></p>
+<img src="../../src/img/WindowsWindows 11でログオン音を流す方法.image4.png@850x400-1x.webp" alt="タスク作成ウィザードの画面" data-original="./image4.png"></p>
 <p>名前や説明を任意に設定し、次へをクリック。トリガーは「ログオン時」をクリックし、次へを押します。ちなみに、この選択肢は後々削除するので、自由に選択してかまいません。操作は何も変えず、「プログラムの開始」で次へを押します。するとプログラムの開始項目になるので、「プログラム/スクリプト」と「引数の追加」にそれぞれ内容を入力していきます。</p>
 <p>プログラム/スクリプト項目には次を入力します。</p>
 <pre><code class="hljs cmd">powershell</code></pre><p>次に引数の追加項目にはこれを入力します。</p>
-<pre><code class="hljs powershell">(<span class="hljs-built_in">New-Object</span> Media.SoundPlayer <span class="hljs-string">"C:\Users\Public\Documents\Media\Logon.wav"</span>).PlaySync();</code></pre><p><img src="./image5.png" alt="入力完了後の画面">
+<pre><code class="hljs powershell">(<span class="hljs-built_in">New-Object</span> Media.SoundPlayer <span class="hljs-string">"C:\Users\Public\Documents\Media\Logon.wav"</span>).PlaySync();</code></pre><p><img src="../../src/img/WindowsWindows 11でログオン音を流す方法.image5.png@850x400-1x.webp" alt="入力完了後の画面" data-original="./image5.png">
 このような形で入力が完了したら、次へを押し、完了をクリックします。これでイベントの準備は完了です。</p>
 <p>次に</p>
 <h2 id="まとめ">まとめ</h2>

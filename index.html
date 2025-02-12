@@ -15,6 +15,23 @@
 
     <title>みはるのホームページ - miharu</title>
     <link rel="stylesheet" href="./src/style.css">
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const topHomeImage = document.getElementById("topHomeImage");
+            topHomeImage.src = ratioReplace(topHomeImage.src, 850, 400);
+            topHomeImage.addEventListener("mouseover", () => { topHomeImage.src = ratioReplace(topHomeImage.src, 850, 400); });
+            topHomeImage.addEventListener("touchstart", () => { topHomeImage.src = ratioReplace(topHomeImage.src, 850, 400); });
+
+            const blogListImages = document.getElementById("blogListUL").querySelectorAll("img");
+            for (const blogListImage of blogListImages) {
+                blogListImage.src = ratioReplace(blogListImage.src, 75, 75);
+                blogListImage.addEventListener("mouseover", () => { blogListImage.src = ratioReplace(blogListImage.src, 75, 75); });
+                blogListImage.addEventListener("touchstart", () => { blogListImage.src = ratioReplace(blogListImage.src, 75, 75); });
+            }
+        });
+    </script>
     <meta name="description" content="みはるのホームページです。">
     <meta property="og:title" content="みはるのホームページ">
     <meta property="og:description" content="みはるのホームページです。">
@@ -71,6 +88,7 @@
     <main>
         <section id="description">
             <h1>みはるのホームページ</h1>
+            <img id="topHomeImage" style="width: 100%; object-fit: contain; border-radius: 10px; overflow: hidden;" src="src/img/homepage@850x400-1x.webp" alt="ホームページの画像">
             <p>ここは貧乏学生が知識を無料で売るために作ったサイトです。</p>
             <p>記事やイラスト、小説を主に見ることができます。ほかにも漫画などを見ることができるようなホームページになるよう、このサイトは日々更新していきたいと思います！</p>
         </section>
@@ -103,9 +121,9 @@ Windowsについてを解説している記事です。</span></span></span><spa
 現在作成中の記事の時にこの表記が表示されます。</span></span></span><span id="hyphen">-</span><span id="incomplete">不完全な記事<span class="popup"><span class="popupBody">説明
 記事の内容が未完全であったり不完全である時にこの表記が表示されます。</span></span></span></span></span></span></div><div class="right"></div></li><li><div class="left"><p><a href="./Blog/ガンダムを見にお台場へ/">ガンダムを見にお台場へ!</a></p><span class="box"><span class="textBox"><span class="blogContent">友達がガンダムが見たいぜ！といいお台場に来ました！
 </span><span class="miniInfo"><span id="timestamp">2024/11/16<span class="popup"><span class="popupBody">2024年11月16日</span></span></span><span id="hyphen">-</span><span id="genre">Blog<span class="popup"><span class="popupBody">説明
-日常などの何気ない様子を書いた記事です。</span></span></span></span></span></span></div><div class="right"><img src="./Blog/ガンダムを見にお台場へ/2.jpg"></div></li><li><div class="left"><p><a href="./Photo/miharu運営が撮影した絶景Part1/">miharu運営が撮影した絶景Part1!</a></p><span class="box"><span class="textBox"><span class="blogContent">ネタがないから書いた記事なんて口が滑っても言えませんが、僕が何となくで撮影した風景を載せていきます。
+日常などの何気ない様子を書いた記事です。</span></span></span></span></span></span></div><div class="right"><img src="src/img/Blogガンダムを見にお台場へ2.jpg@75x75-1x.webp"></div></li><li><div class="left"><p><a href="./Photo/miharu運営が撮影した絶景Part1/">miharu運営が撮影した絶景Part1!</a></p><span class="box"><span class="textBox"><span class="blogContent">ネタがないから書いた記事なんて口が滑っても言えませんが、僕が何となくで撮影した風景を載せていきます。
 </span><span class="miniInfo"><span id="timestamp">2024/11/16<span class="popup"><span class="popupBody">2024年11月16日</span></span></span><span id="hyphen">-</span><span id="genre">Photo<span class="popup"><span class="popupBody">説明
-写真で納めた風景や被写体などを紹介する記事です。</span></span></span></span></span></span></div><div class="right"><img src="./Photo/miharu運営が撮影した絶景Part1/3.jpeg"></div></li><li class="nocreated incomplete"><div class="left"><p><a href="./JavaScript/素人のJavaScript解説/">素人のJavaScript解説!</a></p><span class="box"><span class="textBox"><span class="blogContent">JavaScriptの書き方を解説します。JavaScriptの基礎や、持っておくべき知識を解説します。
+写真で納めた風景や被写体などを紹介する記事です。</span></span></span></span></span></span></div><div class="right"><img src="src/img/Photomiharu運営が撮影した絶景Part13.jpeg@75x75-1x.webp"></div></li><li class="nocreated incomplete"><div class="left"><p><a href="./JavaScript/素人のJavaScript解説/">素人のJavaScript解説!</a></p><span class="box"><span class="textBox"><span class="blogContent">JavaScriptの書き方を解説します。JavaScriptの基礎や、持っておくべき知識を解説します。
 </span><span class="miniInfo"><span id="timestamp">2024/11/16<span class="popup"><span class="popupBody">2024年11月16日</span></span></span><span id="hyphen">-</span><span id="genre">JavaScript<span class="popup"><span class="popupBody">説明
 JavaScriptについてを解説・扱っている記事です。</span></span></span><span id="hyphen">-</span><span id="created">執筆中<span class="popup"><span class="popupBody">説明
 現在作成中の記事の時にこの表記が表示されます。</span></span></span><span id="hyphen">-</span><span id="incomplete">不完全な記事<span class="popup"><span class="popupBody">説明
@@ -156,7 +174,7 @@ Windowsについてを解説している記事です。</span></span></span><spa
 現在作成中の記事の時にこの表記が表示されます。</span></span></span><span id="hyphen">-</span><span id="incomplete">不完全な記事<span class="popup"><span class="popupBody">説明
 記事の内容が未完全であったり不完全である時にこの表記が表示されます。</span></span></span></span></span></span></div><div class="right"></div></li><li><div class="left"><p><a href="./Blog/すた丼鬼盛りの肉増しがえぐすぎた/">すた丼鬼盛りの肉増しがえぐすぎた!</a></p><span class="box"><span class="textBox"><span class="blogContent">今日は１１月２９日、いい肉の日です！というわけで友達がスタミナ丼を食べに行きたいということで、すた丼へやってきました！
 </span><span class="miniInfo"><span id="timestamp">2024/11/29<span class="popup"><span class="popupBody">2024年11月29日</span></span></span><span id="hyphen">-</span><span id="genre">Blog<span class="popup"><span class="popupBody">説明
-日常などの何気ない様子を書いた記事です。</span></span></span></span></span></span></div><div class="right"><img src="./Blog/すた丼鬼盛りの肉増しがえぐすぎた/3.jpeg"></div></li><li class="nocreated"><div class="left"><p><a href="./Windows/Windows 11でログオン音を流す方法/">Windows 11でログオン音を流す方法!</a></p><span class="box"><span class="textBox"><span class="blogContent">この記事では、Windows 11でログオン・ログオフの音を流す方法を紹介します。方法もとても簡単なので、ぜひ読んでいってください。Windows 11だけでなく、Windows 10やその他タスクスケジューラを利用できるWindowsであれば利用できるので、ぜひ応用してみてください。大雑把な解説が見たい場合はまとめをご覧ください。
+日常などの何気ない様子を書いた記事です。</span></span></span></span></span></span></div><div class="right"><img src="src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた3.jpeg@75x75-1x.webp"></div></li><li class="nocreated"><div class="left"><p><a href="./Windows/Windows 11でログオン音を流す方法/">Windows 11でログオン音を流す方法!</a></p><span class="box"><span class="textBox"><span class="blogContent">この記事では、Windows 11でログオン・ログオフの音を流す方法を紹介します。方法もとても簡単なので、ぜひ読んでいってください。Windows 11だけでなく、Windows 10やその他タスクスケジューラを利用できるWindowsであれば利用できるので、ぜひ応用してみてください。大雑把な解説が見たい場合はまとめをご覧ください。
 </span><span class="miniInfo"><span id="timestamp">2024/1/5<span class="popup"><span class="popupBody">2024年1月5日</span></span></span><span id="hyphen">-</span><span id="genre">Windows<span class="popup"><span class="popupBody">説明
 Windowsについてを解説している記事です。</span></span></span><span id="hyphen">-</span><span id="created">執筆中<span class="popup"><span class="popupBody">説明
 現在作成中の記事の時にこの表記が表示されます。</span></span></span></span></span></span></div><div class="right"></div></li><li class="nocreated"><div class="left"><p><a href="./Windows/NTFS圧縮とはメリットとデメリットを解説/">NTFS圧縮とは?メリットとデメリットを解説!</a></p><span class="box"><span class="textBox"><span class="blogContent">皆さんはNTFS圧縮をご存じですか？NTFS圧縮は名前の通り圧縮機能なのですが、zipファイルなどにしなくとも容量を削減できる優れモノです。しかし、良いことだらけではなく、デメリットなどもあるため、今回はそれらについて解説していきます。

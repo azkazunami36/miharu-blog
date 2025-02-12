@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
     <script src="../../src/imagePreviewScript.js"></script>
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const content = document.getElementById("content");
+            const imgs = content.querySelectorAll("img");
+            for (const img of imgs) {
+                img.src = ratioReplace(img.src, 850, 400);
+                img.addEventListener("mouseover", () => { img.src = ratioReplace(img.src, 850, 400); });
+                img.addEventListener("touchstart", () => { img.src = ratioReplace(img.src, 850, 400); });
+            }
+        })
+    </script>
     <meta name="description" content="友達がガンダムが見たいぜ！といいお台場に来ました！
 ">
     <meta property="og:title" content="ガンダムを見にお台場へ!">
@@ -75,24 +88,24 @@
 </header>
     <main>
         <section id="content">
-        <h1>ガンダムを見にお台場へ!</h1><span class="status">ジャンル: Blog　記事作成日: 2024/11/16　タグ: お台場、ブログ、ガンダム</span><p><img id="topImage" class="ignorePreview" src="./2.jpg"></p><p>友達がガンダムが見たいぜ！といいお台場に来ました！</p>
-<div class="indexBox" style="display: none;"><span><p>目次</p><ol class="indexOl"></ol></span></div><p><img src="./1.jpg" alt="お台場の写真"></p>
+        <h1>ガンダムを見にお台場へ!</h1><span class="status">ジャンル: Blog　記事作成日: 2024/11/16　タグ: お台場、ブログ、ガンダム</span><p><img id="topImage" class="ignorePreview" src="../../src/img/Blogガンダムを見にお台場へ.2.jpg@850x400-1x.webp" data-original="./2.jpg"></p><p>友達がガンダムが見たいぜ！といいお台場に来ました！</p>
+<div class="indexBox" style="display: none;"><span><p>目次</p><ol class="indexOl"></ol></span></div><p><img src="../../src/img/Blogガンダムを見にお台場へ.1.jpg@850x400-1x.webp" alt="お台場の写真" data-original="./1.jpg"></p>
 <p>まずお台場について真っ先にガンダムベースに向かったのですが、まさかの予約になっていて、午後から解放という事実を知りました。</p>
 <p>そしてガンダムベースの広場みたいなところに行き、ガンダムを撮影しました。</p>
-<p><img src="./2.jpg" alt="ガンダムすごい"></p>
+<p><img src="../../src/img/Blogガンダムを見にお台場へ.2.jpg@850x400-1x.webp" alt="ガンダムすごい" data-original="./2.jpg"></p>
 <p>ある程度ガンダムを満喫して、適当に歩き回っていたら、とある自販機を見つけました。</p>
-<p><img src="./3.jpg" alt="コーラだらけの自販機"></p>
+<p><img src="../../src/img/Blogガンダムを見にお台場へ.3.jpg@850x400-1x.webp" alt="コーラだらけの自販機" data-original="./3.jpg"></p>
 <p>なんと、コーラしか売っていない自販機でした。驚いて撮影したのですが、そこに売っているコーラが高すぎると思ったのが印象です。</p>
 <p>そのあとは昼ご飯を食べに行きました。たこ焼きを食べました。</p>
-<p><img src="./5.jpg" alt="たこ焼き"></p>
+<p><img src="../../src/img/Blogガンダムを見にお台場へ.5.jpg@850x400-1x.webp" alt="たこ焼き" data-original="./5.jpg"></p>
 <p>メジャーな銀だこですが、おいしかったです。</p>
 <p>その後はお台場をプラプラして、適当に一枚撮りました(一切アングル考えずに唐突に撮影したもの)。</p>
-<p><img src="./4.jpg" alt="風景"></p>
+<p><img src="../../src/img/Blogガンダムを見にお台場へ.4.jpg@850x400-1x.webp" alt="風景" data-original="./4.jpg"></p>
 <p>適当な割に綺麗な気は...しないですね。</p>
 <p>そのあとは夜ご飯で壱角家に行き、MAXラーメン食べに行きました。</p>
-<p><img src="./6.jpg" alt="壱角家のラーメン"></p>
+<p><img src="../../src/img/Blogガンダムを見にお台場へ.6.jpg@850x400-1x.webp" alt="壱角家のラーメン" data-original="./6.jpg"></p>
 <p>とてもおいしいですが、ご飯を友達にドアホのように盛り付けられ、後半が厳しかったです。</p>
-<p><img src="./7.jpg" alt="壱角家のラーメンの卵"></p>
+<p><img src="../../src/img/Blogガンダムを見にお台場へ.7.jpg@850x400-1x.webp" alt="壱角家のラーメンの卵" data-original="./7.jpg"></p>
 <p>この卵がつらかった...。</p>
 </section>
     </main>

@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
     <script src="../../src/imagePreviewScript.js"></script>
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const content = document.getElementById("content");
+            const imgs = content.querySelectorAll("img");
+            for (const img of imgs) {
+                img.src = ratioReplace(img.src, 850, 400);
+                img.addEventListener("mouseover", () => { img.src = ratioReplace(img.src, 850, 400); });
+                img.addEventListener("touchstart", () => { img.src = ratioReplace(img.src, 850, 400); });
+            }
+        })
+    </script>
     <meta name="description" content="ネタがないから書いた記事なんて口が滑っても言えませんが、僕が何となくで撮影した風景を載せていきます。
 ">
     <meta property="og:title" content="miharu運営が撮影した絶景Part1!">
@@ -75,20 +88,20 @@
 </header>
     <main>
         <section id="content">
-        <h1>miharu運営が撮影した絶景Part1!</h1><span class="status">ジャンル: Photo　記事作成日: 2024/11/16　タグ: 絶景、風景、写真</span><p><img id="topImage" class="ignorePreview" src="./3.jpeg"></p><p>ネタがないから書いた記事なんて口が滑っても言えませんが、僕が何となくで撮影した風景を載せていきます。</p>
+        <h1>miharu運営が撮影した絶景Part1!</h1><span class="status">ジャンル: Photo　記事作成日: 2024/11/16　タグ: 絶景、風景、写真</span><p><img id="topImage" class="ignorePreview" src="../../src/img/Photomiharu運営が撮影した絶景Part1.3.jpeg@850x400-1x.webp" data-original="./3.jpeg"></p><p>ネタがないから書いた記事なんて口が滑っても言えませんが、僕が何となくで撮影した風景を載せていきます。</p>
 <div class="indexBox" style="display: none;"><span><p>目次</p><ol class="indexOl"></ol></span></div><p>まずは千葉のとある公園で撮った写真です。</p>
-<p><img src="./2.jpeg" alt="公園の緑がたくさんある風景"></p>
+<p><img src="../../src/img/Photomiharu運営が撮影した絶景Part1.2.jpeg@850x400-1x.webp" alt="公園の緑がたくさんある風景" data-original="./2.jpeg"></p>
 <p>すごくきれいなんですよ。光がいい感じです。ほかには...</p>
-<p><img src="./5.jpeg" alt="公園の川"></p>
+<p><img src="../../src/img/Photomiharu運営が撮影した絶景Part1.5.jpeg@850x400-1x.webp" alt="公園の川" data-original="./5.jpeg"></p>
 <p>これなんかはもう壁紙にしてもしばらく飽きないワンショット！実際にそこにいたときはめちゃめちゃ楽しかったです。</p>
 <p>後は、千葉の橋を渡っているときの写真です。</p>
-<p><img src="./3.jpeg" alt="橋から眺める川"></p>
+<p><img src="../../src/img/Photomiharu運営が撮影した絶景Part1.3.jpeg@850x400-1x.webp" alt="橋から眺める川" data-original="./3.jpeg"></p>
 <p>これもすごくきれいで、一時期壁紙にしていました。</p>
 <p>次に、ちょっとトレーニングがてら走ってた時に撮った１枚です。</p>
-<p><img src="./1.jpeg" alt="野球場みたいなところ"></p>
+<p><img src="../../src/img/Photomiharu運営が撮影した絶景Part1.1.jpeg@850x400-1x.webp" alt="野球場みたいなところ" data-original="./1.jpeg"></p>
 <p>実際に見たときは臨場感がすごかったのですが、写真で見ると...普通ですね。</p>
 <p>最後にちょっとスクショで切り取ったものですが、千葉で撮ったものです。</p>
-<p><img src="./4.jpeg" alt="森"></p>
+<p><img src="../../src/img/Photomiharu運営が撮影した絶景Part1.4.jpeg@850x400-1x.webp" alt="森" data-original="./4.jpeg"></p>
 <p>左右の黒帯は置いておいて、これも嫌いではありません。</p>
 </section>
     </main>

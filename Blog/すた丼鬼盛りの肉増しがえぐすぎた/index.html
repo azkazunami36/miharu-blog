@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
     <script src="../../src/imagePreviewScript.js"></script>
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const content = document.getElementById("content");
+            const imgs = content.querySelectorAll("img");
+            for (const img of imgs) {
+                img.src = ratioReplace(img.src, 850, 400);
+                img.addEventListener("mouseover", () => { img.src = ratioReplace(img.src, 850, 400); });
+                img.addEventListener("touchstart", () => { img.src = ratioReplace(img.src, 850, 400); });
+            }
+        })
+    </script>
     <meta name="description" content="今日は１１月２９日、いい肉の日です！というわけで友達がスタミナ丼を食べに行きたいということで、すた丼へやってきました！
 ">
     <meta property="og:title" content="すた丼鬼盛りの肉増しがえぐすぎた!">
@@ -75,32 +88,32 @@
 </header>
     <main>
         <section id="content">
-        <h1>すた丼鬼盛りの肉増しがえぐすぎた!</h1><span class="status">ジャンル: Blog　記事作成日: 2024/11/29　タグ: 無料、すた丼、いい肉の日、肉増し</span><p><img id="topImage" class="ignorePreview" src="./3.jpeg"></p><p>今日は１１月２９日、いい肉の日です！というわけで友達がスタミナ丼を食べに行きたいということで、すた丼へやってきました！</p>
-<div class="indexBox" style="display: none;"><span><p>目次</p><ol class="indexOl"></ol></span></div><p><img src="./1.jpeg" alt="メニュー一覧"></p>
+        <h1>すた丼鬼盛りの肉増しがえぐすぎた!</h1><span class="status">ジャンル: Blog　記事作成日: 2024/11/29　タグ: 無料、すた丼、いい肉の日、肉増し</span><p><img id="topImage" class="ignorePreview" src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.3.jpeg@850x400-1x.webp" data-original="./3.jpeg"></p><p>今日は１１月２９日、いい肉の日です！というわけで友達がスタミナ丼を食べに行きたいということで、すた丼へやってきました！</p>
+<div class="indexBox" style="display: none;"><span><p>目次</p><ol class="indexOl"></ol></span></div><p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.1.jpeg@850x400-1x.webp" alt="メニュー一覧" data-original="./1.jpeg"></p>
 <p>まずは選ぶところから...と言いつつ、もう決まっております。</p>
-<p><img src="./2.jpeg" alt="カートに鬼盛りすた丼"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.2.jpeg@850x400-1x.webp" alt="カートに鬼盛りすた丼" data-original="./2.jpeg"></p>
 <p>そう、今回はガツンと食ってやろうと、鬼盛りを選びました！！</p>
-<p><img src="./3.jpeg" alt="実際の鬼盛りすた丼"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.3.jpeg@850x400-1x.webp" alt="実際の鬼盛りすた丼" data-original="./3.jpeg"></p>
 <p>この肉のボリューム、これはすた丼の鬼盛り丼にプラスで、肉増しトッピングをしています...！すげえなと思いつつ、いただきます！</p>
-<p><img src="./4.jpeg" alt="お肉を摘んでる"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.4.jpeg@850x400-1x.webp" alt="お肉を摘んでる" data-original="./4.jpeg"></p>
 <p>このお肉、いいですよね...</p>
-<p><img src="./5.jpeg" alt="れんげでご飯をすくって"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.5.jpeg@850x400-1x.webp" alt="れんげでご飯をすくって" data-original="./5.jpeg"></p>
 <p>順調に食べ進めて...</p>
 <p>ここら辺で卵を入れようかなと思い、卵を割りました。そしたら、見事に...</p>
-<p><img src="./6.jpeg" alt="卵の殻が入った"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.6.jpeg@850x400-1x.webp" alt="卵の殻が入った" data-original="./6.jpeg"></p>
 <p>どんぶりに卵が着地しました...＾＾でも美味しそうなのでよしとしましょう!(本当は良くないかもしれないですけど)</p>
-<p><img src="./7.jpeg" alt="かなり減ってきた丼"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.7.jpeg@850x400-1x.webp" alt="かなり減ってきた丼" data-original="./7.jpeg"></p>
 <p>順調に食べている中、お腹に違和感が...。</p>
 <p>実は僕、話は逸れるのですが先週コロナにかかっていて、その影響か胃袋が小さくなっているみたいで...。やばい、正直もうダメかも...。</p>
-<p><img src="./8.jpeg" alt="少ないが残っている丼"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.8.jpeg@850x400-1x.webp" alt="少ないが残っている丼" data-original="./8.jpeg"></p>
 <p>ここら辺でギブアップ...もう僕この小さな３口分にも満たない量を食べきれませんでした...。ですが、</p>
-<p><img src="./9.jpeg" alt="友達２人が食事中の様子"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.9.jpeg@850x400-1x.webp" alt="友達２人が食事中の様子" data-original="./9.jpeg"></p>
 <p>隣に実はマジで２人友達がいて、その２人にこの少量を食べていただきました！ありがとう！！</p>
 <p>そして僕はスタバへ直行。友達も「奢ってよ〜〜〜〜〜〜」と言っていたので同伴。その時に友達が</p>
 <p>「いや〜味が足りんのよな。脂が足りねぇ！！」</p>
 <p>と言っていました。僕、今味が濃すぎて死にそうなんだ...(´；ω；｀)</p>
 <p>なんてことがあり、スタバで休憩して、ブログを今書いております。</p>
-<p><img src="./IMG_3605.jpeg" alt="スタバのコップ"></p>
+<p><img src="../../src/img/Blogすた丼鬼盛りの肉増しがえぐすぎた.IMG_3605.jpeg@850x400-1x.webp" alt="スタバのコップ" data-original="./IMG_3605.jpeg"></p>
 <p>もう到着して1時間経つのですが、新作の「メリーベリーストロベリー ミルク」を飲んでます！姉がおすすめしていたので買ったのですが、うまいこれ！おすすめです。</p>
 <p>１２月中旬まで販売しているので、お早めに買いに行きましょう！あ、その前に、すた丼、食べような？＾＾</p>
 </section>

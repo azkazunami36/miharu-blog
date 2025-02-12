@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
     <script src="../../src/imagePreviewScript.js"></script>
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const content = document.getElementById("content");
+            const imgs = content.querySelectorAll("img");
+            for (const img of imgs) {
+                img.src = ratioReplace(img.src, 850, 400);
+                img.addEventListener("mouseover", () => { img.src = ratioReplace(img.src, 850, 400); });
+                img.addEventListener("touchstart", () => { img.src = ratioReplace(img.src, 850, 400); });
+            }
+        })
+    </script>
     <meta name="description" content="JavaScriptの書き方を解説します。JavaScriptの基礎や、持っておくべき知識を解説します。
 ">
     <meta property="og:title" content="素人のJavaScript解説!">
@@ -90,10 +103,10 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre><p>次にJavaScriptです。bodyタグに文字を表示させます。</p>
 <pre><code class="hljs js"><span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">innerText</span> = <span class="hljs-string">"JavaScriptが実行されました。"</span>;</code></pre><p>これをHTMLは「index.html」、JavaScriptは「script.js」で保存し、htmlファイルを開くと、こうなるはずです。</p>
-<p><img src="./1.png" alt="JavaScriptを実行したブラウザの画面"></p>
+<p><img src="../../src/img/JavaScript素人のJavaScript解説.1.png@850x400-1x.webp" alt="JavaScriptを実行したブラウザの画面" data-original="./1.png"></p>
 <p>まず、JavaScriptの実行方法を理解していただけたかと思います。では先ほどのscript.jsの内容を次のコードに置き換えてみましょう。</p>
 <pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"Hello World!"</span>);</code></pre><p>このコードは初心者のコード練習でメジャーのコードです。実際に実行し、DevToolsを開いて、コンソールを見てみると、次が表示されるはずです。</p>
-<p><img src="./2.png" alt="JavaScriptを実行したブラウザの画面"></p>
+<p><img src="../../src/img/JavaScript素人のJavaScript解説.2.png@850x400-1x.webp" alt="JavaScriptを実行したブラウザの画面" data-original="./2.png"></p>
 <p>コンソール文はプログラムの検証の時に役立つので、覚えておきましょう。ちなみに、DevToolsはChromeの場合Ctrlキー+Shiftキー+Iキーで開くことができます。</p>
 <p>JavaScriptは何も書かれていない空のファイルに１行プログラムを書くだけで実行することができます。この前提を理解してから次へ行きましょう。</p>
 <h2 id="変数を知る">変数を知る</h2>

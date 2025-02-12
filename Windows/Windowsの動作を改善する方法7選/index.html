@@ -17,6 +17,19 @@
     <link rel="stylesheet" href="../../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.css">
     <script src="../../src/imagePreviewScript.js"></script>
+    <script>
+        addEventListener("load", () => {
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+
+            const content = document.getElementById("content");
+            const imgs = content.querySelectorAll("img");
+            for (const img of imgs) {
+                img.src = ratioReplace(img.src, 850, 400);
+                img.addEventListener("mouseover", () => { img.src = ratioReplace(img.src, 850, 400); });
+                img.addEventListener("touchstart", () => { img.src = ratioReplace(img.src, 850, 400); });
+            }
+        })
+    </script>
     <meta name="description" content="この記事ではWindowsを軽くする方法を解説します。少しWindowsが重くなってきたなと思ったらぜひご覧ください。
 ">
     <meta property="og:title" content="Windowsの動作を改善する方法7選!">
@@ -85,13 +98,13 @@
 <h2 id="スタートアップアプリを極力減らす">スタートアップアプリを極力減らす</h2>
 <p>Windowsにはスタートアップという機能があり、パソコンを起動してから自動でアプリが起動するように設定することができます。しかし、それが悪さをして、起動してからずっとパソコンに負荷をかけてしまうことがあります。</p>
 <p>無効にする方法を紹介します。まず、タスクバーで右クリックをします。</p>
-<p><img src="./1.png" alt="タスクバー右クリックメニュー"></p>
+<p><img src="../../src/img/WindowsWindowsの動作を改善する方法7選.1.png@850x400-1x.webp" alt="タスクバー右クリックメニュー" data-original="./1.png"></p>
 <p>そして「タスクマネージャー」をクリックしてください。するとこのような画面が出ます。</p>
 <p>Windows 10の場合</p>
 <p>Windows 11の場合</p>
-<p><img src="./2.png" alt="タスクマネージャーWindows11"></p>
+<p><img src="../../src/img/WindowsWindowsの動作を改善する方法7選.2.png@850x400-1x.webp" alt="タスクマネージャーWindows11" data-original="./2.png"></p>
 <p>Windows 10の場合は「スタートアップ」、Windows 11の場合は「スタートアップ アプリ」をクリックします。すると次の画面が表示されます。これはWindows 11の画面です。</p>
-<p><img src="./3.png" alt="タスクマネージャーのスタートアップアプリ画面">
+<p><img src="../../src/img/WindowsWindowsの動作を改善する方法7選.3.png@850x400-1x.webp" alt="タスクマネージャーのスタートアップアプリ画面" data-original="./3.png">
 筆者の環境ではたくさんのスタートアップが登録されていますが、「状態」を注目すると、有効だったり無効だったりします。</p>
 <p>今回はそれを全て無効にしてください。そうすることで動作が快適になります。ちなみに、Windows セキュリティのアイコンがあるかと思いますが、それは無効にしてもセキュリティ上問題はないですが、有効でも構いません、ご自由に設定してください。</p>
 <h2 id="視差効果などを無効にする">視差効果などを無効にする</h2>
