@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./src/style.css">
     <script>
         addEventListener("load", () => {
-            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 4 ? window.devicePixelRatio : 4) || 1) + "x.webp"); }
+            function ratioReplace(src, width, height) { return src.replace(/@\d+x\d+-\d+x.webp/, "@" + width + "x" + height + "-" + Math.ceil((window.devicePixelRatio <= 8 ? window.devicePixelRatio : 8) || 1) + "x.webp"); }
 
             const topHomeImage = document.getElementById("topHomeImage");
             topHomeImage.src = ratioReplace(topHomeImage.src, 850, 400);
