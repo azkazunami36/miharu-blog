@@ -14,6 +14,10 @@ body {
   height: calc(100% - 50px);
 }
 
+a {
+  word-wrap: break-word;
+}
+
 @keyframes viewedChangeOn {
   0% {
     opacity: 0;
