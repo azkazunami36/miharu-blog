@@ -245,6 +245,10 @@ main section h4 {
 main section p {
   font-size: 1em;
 }
+main section p span.big {
+  font-size: 2em;
+  font-weight: 800;
+}
 main section img {
   max-width: 900px;
   max-height: 400px;
