@@ -276,6 +276,95 @@ main section img#topImage {
   border-radius: 15px;
   object-fit: cover;
 }
+main section div#twitterProfileEmbed:hover {
+  background: rgb(247, 249, 249);
+}
+main section div#twitterProfileEmbed:active {
+  background: rgba(230, 236, 240, 0.7);
+}
+main section div#twitterProfileEmbed {
+  max-width: 550px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #cfd9de;
+  background: white;
+  color: black;
+  transition: 0.2s;
+}
+main section div#twitterProfileEmbed a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+main section div#twitterProfileEmbed #background {
+  position: absolute;
+}
+main section div#twitterProfileEmbed #front {
+  position: relative;
+}
+main section div#twitterProfileEmbed #front img {
+  max-width: 150px;
+  width: 25%;
+  border-radius: 99999px;
+  border: 6px solid rgb(255, 255, 255);
+  margin: 100px 10px 0px 10px;
+}
+main section div#twitterProfileEmbed #front #nickname {
+  margin: 0px 20px;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+main section div#twitterProfileEmbed #front #handle {
+  margin: 0px 20px;
+  color: rgb(113, 118, 122);
+}
+main section div#twitterProfileEmbed #front #followData {
+  display: flex;
+  margin: 10px 20px 0 20px;
+}
+main section div#twitterProfileEmbed #front #followData #following {
+  font-weight: 900;
+  margin: 0 5px 0 0;
+}
+main section div#twitterProfileEmbed #front #followData #followingText {
+  color: rgb(113, 118, 122);
+  margin: 0 20px 0 0;
+}
+main section div#twitterProfileEmbed #front #followData #follower {
+  font-weight: 900;
+  margin: 0 5px 0 0;
+}
+main section div#twitterProfileEmbed #front #followData #followerText {
+  color: rgb(113, 118, 122);
+}
+main section div#twitterProfileEmbed #front #description {
+  margin: 10px 20px 0;
+}
+main section div#twitterProfileEmbed #front button {
+  border: 1px solid rgb(207, 217, 222);
+  background: rgba(0, 111, 214, 0);
+  color: rgb(1, 111, 214);
+  font-weight: 900;
+  width: calc(100% - 30px);
+  height: 35px;
+  margin: auto;
+  display: block;
+  border-radius: 99px;
+  transition: 0.2s;
+}
+main section div#twitterProfileEmbed #front button:hover {
+  background: rgba(0, 111, 214, 0.1);
+}
+main section div#twitterProfileEmbed #front #createTimeStamp {
+  color: rgb(113, 118, 122);
+  font-size: 0.7em;
+  display: block;
+  text-align: end;
+  margin: 0px 20px 5px 0;
+}
 main section code {
   top: -2px;
   position: relative;
@@ -477,6 +566,9 @@ footer section {
   header nav ul li span {
     width: 100%;
     justify-content: flex-end;
+  }
+  main section div#twitterProfileEmbed #front img {
+    margin: 16vw 10px 0px 10px;
   }
 }
 @media (prefers-color-scheme: dark) {
