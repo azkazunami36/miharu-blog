@@ -156,12 +156,18 @@ header span#title {
   user-select: none;
 }
 header span#title a {
+  display: flex;
   text-decoration: none;
   color: inherit;
 }
 header span#title a:hover, header span#title a:focus, header span#title a:active {
   text-decoration: none;
   color: inherit;
+}
+header span#title a img {
+  width: 25%;
+  border-radius: 10px;
+  margin: 0 7px 0 8px;
 }
 header nav {
   display: flex;
@@ -276,6 +282,12 @@ main section img#topImage {
   border-radius: 15px;
   object-fit: cover;
 }
+main section div#twitterProfileEmbed:active {
+  background: rgba(230, 236, 240, 0.7);
+}
+main section div#twitterProfileEmbed:hover {
+  background: rgb(247, 249, 249);
+}
 main section div#twitterProfileEmbed {
   max-width: 550px;
   margin: auto;
@@ -286,12 +298,6 @@ main section div#twitterProfileEmbed {
   background: white;
   color: black;
   transition: 0.2s;
-}
-main section div#twitterProfileEmbed:active {
-  background: rgba(230, 236, 240, 0.7);
-}
-main section div#twitterProfileEmbed:hover {
-  background: rgb(247, 249, 249);
 }
 main section div#twitterProfileEmbed a {
   display: block;
