@@ -423,10 +423,14 @@ main section table {
   border-radius: 15px;
   padding: 0px;
   box-shadow: rgba(0, 0, 0, 0.1882352941) 0px 0px 0px 1px;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-width: fit-content;
   border-spacing: 0;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  display: block;
+  margin: 1em auto;
 }
 main section table thead tr th {
   background: #c7c7c7;
