@@ -242,11 +242,11 @@ main section h2 {
 }
 main section h3 {
   font-size: 1.5em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4392156863);
 }
 main section h4 {
   font-size: 1.25em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2509803922);
 }
 main section p {
   font-size: 1em;
@@ -427,17 +427,17 @@ main section table {
   overflow-x: scroll;
   max-width: fit-content;
   border-spacing: 0;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
   display: block;
   margin: 1em auto;
 }
 main section table thead tr th {
   background: #c7c7c7;
   padding: 2px 10px;
+  text-wrap: nowrap;
 }
 main section table tbody tr td {
   padding: 5px 10px;
+  text-wrap: nowrap;
 }
 main section table tbody tr:hover {
   background: rgba(0, 0, 0, 0.062745098);
